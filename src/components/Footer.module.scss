@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: var(--footer-height);
+  line-height: var(--line-height);
+  background-color: var(--midnight-900);
+  color: var(--gray-400);
+  padding: 0 var(--side-padding);
+
+  @media screen and (max-width: 743px) {
+    & {
+      --font-md: 12px;
+      --font-lg: 14px;
+      --line-height: 22px;
+      flex-direction: column-reverse;
+      padding-bottom: 29px;
+      padding-top: 18px;
+    }
+    .infoContainer {
+      article {
+        justify-content: start;
+        address {
+          justify-content: start !important;
+          flex-direction: column !important;
+          span {
+            gap: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 744px) {
+    & {
+      --font-md: 14px;
+      --font-lg: 16px;
+      --line-height: 24px;
+    }
+  }
+
+  @media screen and (min-width: 744px) and (max-width: 1023px){
+    & {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      padding-bottom: 44px;
+      padding-top: 34px;
+    }
+    img {
+      height: 48px !important;
+    }
+    .infoContainer {
+      article {
+        justify-content: start;
+        address {
+          justify-content: start !important;
+        }
+      }
+    }
+  }
+}
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: var(--font-md);
+}
+.infoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  //flex-direction: row-reverse;
+  font-size: var(--font-md);
+  & article {
+    display: flex;
+    justify-content: end;
+  }
+  & p {
+    margin: 0;
+  }
+  article:nth-child(1){
+    gap: 30px;
+    display: flex;
+    p {
+      color: #fff;
+      cursor: pointer;
+      font-size: var(--font-lg);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  article:nth-child(2) {
+    address {
+      display: flex;
+      justify-content: end;
+      text-align: right;
+      flex-wrap: wrap;
+    }
+    span {
+      display: inline-flex;
+      gap: 12px;
+      font-size: var(--font-md);
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import { FAQInquiryItem, FAQProcessItem } from '@/type'
+
 export interface FAQ {
   id: string;
   category: string;
@@ -57,35 +59,51 @@ export const FaqCategory = {
   ]
 }
 
-export const faqData: FAQ[] = [
+export const FAQInquiry: FAQInquiryItem[] = [
   {
-    id: '1',
-    category: 'general',
-    question: 'KIA Biz 서비스는 어떤 서비스인가요?',
-    answer: 'KIA Biz는 기아의 비즈니스 솔루션 서비스입니다. 기업 고객을 위한 맞춤형 모빌리티 서비스를 제공하며, 차량 관리부터 운영까지 통합 솔루션을 제공합니다.'
+    id: 'download',
+    title: '서비스 제안서 다운로드',
+    icon: '/img/ic_download.svg',
+    link: '/기아 비즈 서비스 제안서.pdf',
   },
   {
-    id: '2',
-    category: 'service',
-    question: '서비스 이용 신청은 어떻게 하나요?',
-    answer: '서비스 이용 신청은 홈페이지 상단의 \"상담문의\" 메뉴를 통해 가능합니다. 상담 신청 후 담당자가 순차적으로 연락드립니다.'
+    id: 'request',
+    title: '상담문의 등록하기',
+    icon: '/img/ic_write.svg',
+    link: 'https://wiblebiz.kia.com/Counsel',
   },
   {
-    id: '3',
-    category: 'payment',
-    question: '서비스 요금은 어떻게 되나요?',
-    answer: '서비스 요금은 이용하시는 서비스 종류와 규모에 따라 다르게 책정됩니다. 자세한 요금 안내는 상담문의를 통해 확인하실 수 있습니다.'
+    id: 'kakao',
+    title: '카톡으로 문의하기',
+    subTitle: "ID: 기아 비즈",
+    icon: '/img/ic_talk.svg',
+    link: 'https://pf.kakao.com/_xfLxjdb',
+  },
+]
+
+export const FAQProcessItems: FAQProcessItem[] = [
+  {
+    id: 1,
+    title: "문의 등록",
+    desc: "상담 문의를 등록해 주시면, 담당자가 맞춤형 상담을 제공합니다.",
+    icon: "/img/ic_process01.svg",
   },
   {
-    id: '4',
-    category: 'technical',
-    question: '기술적인 문제가 발생했을 때 어떻게 해야 하나요?',
-    answer: '기술 지원이 필요하신 경우 고객센터(1234-5678)로 연락주시거나, 홈페이지 내 상담문의를 통해 문의해 주시면 신속하게 도움을 드리도록 하겠습니다.'
+    id: 2,
+    title: "관리자 등록",
+    desc: "관리자 Web 접속 후 결제방식 및 회사정보를 설정합니다.",
+    icon: "/img/ic_process02.svg",
   },
   {
-    id: '5',
-    category: 'general',
-    question: '서비스 이용 가능 지역은 어디인가요?',
-    answer: '현재 전국 주요 도시에서 서비스 이용이 가능합니다. 구체적인 서비스 가능 지역은 상담 시 안내해 드립니다.'
+    id: 3,
+    title: "임직원 가입",
+    desc: "이용자 App에서 회원가입 후 소속 회사 인증을 진행합니다.",
+    icon: "/img/ic_process03.svg",
+  },
+  {
+    id: 4,
+    title: "서비스 이용",
+    desc: "이용자 App에서 차량 예약을 하고 K존에서 바로 이용하세요!",
+    icon: "/img/ic_process04.svg",
   }
-];
+]

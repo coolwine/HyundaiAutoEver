@@ -1,3 +1,38 @@
+@media screen and (max-width: 1023px){
+  .container {
+    nav {
+      margin-left: 0;
+      position: fixed;
+      top: var(--header-height);
+      background-color: #fff;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      left: -100%;
+      padding: 0 var(--side-padding);
+      transition: margin-left .8s var(--cubic-bezier-primary);
+      width: 100%;
+      &.active {
+        margin-left: 100%;
+        width: 100%;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0;
+        padding-top: 80px;
+        a {
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+    .moreBtn {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
 .container {
   background-color: #fff;
   padding: 0 var(--side-padding);
@@ -5,20 +40,30 @@
   top: 0;
   height: var(--header-height);
   z-index: 100;
-}
-.menuContainer {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-  .menu {
-    color: #000;
-    display: block;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: var(--header-height);
-    padding: 0 4px;
-    position: relative;
-    text-decoration: none;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,.08);
+  & > div:first-child {
+    flex: 1;
   }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    .menu {
+      color: #000;
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: var(--header-height);
+      padding: 0 4px;
+      position: relative;
+      text-decoration: none;
+    }
+  }
+}
+.moreBtn {
+  display: none;
+  cursor: pointer;
 }
 

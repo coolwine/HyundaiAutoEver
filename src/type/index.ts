@@ -6,3 +6,18 @@ export interface FaqRow {
   question: string
   answer: string
 }
+
+export interface FAQInquiryItem {
+  id: string
+  title: string
+  subTitle?: string
+  icon: string
+  link: string
+}
+
+export interface FAQProcessItem {
+  id: number
+  title: string
+  desc: string
+  icon: string
+}
