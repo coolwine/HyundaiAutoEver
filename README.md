@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+## 설치
 
 ```bash
-npm run dev
-# or
+yarn install
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 접근
+[http://localhost:3000](http://localhost:3000) 브라우져 주소로 접근합니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 설명
+- /api/faq: 최초접근 시 test 데이터를 생성하여 메모리에 저장합니다. 이후 접근 시에는 메모리에 저장된 데이터를 활용합니다.
+- /api/faq/category: 카테고리 데이터를 리턴합니다. 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 제한사항
+- 아래 조건을 참고하여 안내드리는 주소(https://wiblebiz.kia.com/FAQ)의 화면을
+- 본인이 작업한다는 가정 하에 최대한 비슷하게 제작 (지원자의 갯랩, 깃헙 저장소에서 과제를 수행)
+1. 조건 1 : 필요한 이미지가 있다면 다운로드하여 사용 가능
+2. 조건 2 : 필요한 API 응답 결과는 개발자도구(크롬 기준) > 네트워크 탭 > Fetch/XHR 에서 참고
+             (프로젝트 내부에 목업데이터 형태로 가지고 시뮬레이션)
+3. 조건 3 : MSW(Mock Service Worker)나 JSON Server 같은 오픈소스 활용 가능
+4. 조건 4 : 개발 환경은 Vite를 활용해서 직접 구성 또는 Next.js를 세팅하여 진행
+5. 조건 5 : 스타일링은 CSS, SASS, CSS in JS 등 작업하기 편한 도구 활용
+6. 조건 6 : Fetch 관련 오픈소스도 React Query, SWR등을 활용 가능, 네이티브 Fetch를 사용 가능
