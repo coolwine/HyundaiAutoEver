@@ -17,8 +17,12 @@ function InquiryItem({ item }: { item: FAQInquiryItem }){
 
 export default function FaqServiceInquiry() {
   return (
-    <section className={styles.container}>
-      { FAQInquiry.map((item) => <InquiryItem key={item.id} item={item} />) }
+    <section>
+      <h2>서비스 문의</h2>
+      <article className={styles.container}>
+        { FAQInquiry.map((item) => <InquiryItem key={item.id} item={item} />) }
+      </article>
     </section>
+
   )
 }

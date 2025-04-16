@@ -31,6 +31,15 @@ function FAQItem({ row }: { row: FaqRow }){
   )
 }
 
+function EmptyList(){
+  return (
+    <section className={styles.emptyContainer}>
+      <Image src="/img/ic_nodata.svg" alt="empty list" width={56} height={56} />
+      <p>검색결과가 없습니다.</p>
+    </section>
+  )
+}
+
 export default function FAQList(){
   const rows = useFAQStore((state) => state.rows)
   const hasNextPage = useFAQStore((state) => state.hasNextPage)
@@ -44,13 +53,13 @@ export default function FAQList(){
       </ul>
 
       { isLoading && <div>Loading...</div> }
-
+      { !isLoading && !rows.length && <EmptyList /> }
       {
-        !isLoading && hasNextPage && (
+        (!isLoading && hasNextPage && rows.length) ? (
           <button className={styles.more} onClick={onNextPage}>
             + 더보기
           </button>
-        )
+        ) : null
       }
     </div>
   )

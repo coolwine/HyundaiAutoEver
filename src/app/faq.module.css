@@ -2,19 +2,9 @@
   padding: 0 var(--side-padding) var(--bottom-padding)
 }
 
-/* Optional: Add some responsiveness */
 @media (max-width: 768px) {
     .container {
         margin: 20px auto;
         padding: 15px;
     }
-    .mainTitle {
-        font-size: 2rem;
-        margin-bottom: 30px;
-    }
-    .categoryTitle {
-        font-size: 1.3rem;
-    }
-    /* Adjust accordion item font size if needed */
-    /* You might need to adjust styles in AccordionItem.module.css too */
 }

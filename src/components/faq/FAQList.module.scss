@@ -50,3 +50,13 @@
   background: none;
   border: none;
 }
+.emptyContainer {
+  border-bottom: 1px solid var(--gray-200);
+  border-top: 2px solid var(--midnight-900);
+  padding: var(--space-box2) 0;
+  text-align: center;
+  p {
+    color: var(--gray-500);
+    word-break: keep-all;
+  }
+}

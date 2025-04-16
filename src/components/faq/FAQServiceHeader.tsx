@@ -39,8 +39,14 @@ function FAQSearchInput(){
         placeholder="찾으시는 내용을 입력해 주세요"
         value={text}
         onChange={(evt) => setText(evt.target.value)}
+        onKeyDown={(evt) => evt.key === "Enter" ? setSearchText(text.trim()) : null }
       />
-      <button className={styles.searchBtn} onClick={() => setSearchText(text)}>
+
+      <button className={styles.clearBtn} onClick={() => setSearchText("")}>
+        <Image src="/img/ic_clear.svg" width={30} height={30} alt="clear" />
+      </button>
+
+      <button className={styles.searchBtn} onClick={() => setSearchText(text.trim())}>
         <Image src="/img/ic_search.svg" width={30} height={30} alt="Search" />
       </button>
     </section>
